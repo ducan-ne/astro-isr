@@ -1,0 +1,22 @@
+{
+  "name": "astro-ssg",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro build && wrangler pages dev ./dist",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "up": "wrangler pages deploy ./dist --project-name astro-ssg --branch production"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.6.0",
+    "@astrojs/cloudflare": "^10.2.5",
+    "astro": "^4.8.2",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240502.0"
+  }
+}
