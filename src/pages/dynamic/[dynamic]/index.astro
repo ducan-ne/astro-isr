@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Card from '../../../components/Card.astro';
 Astro.response.headers.set('x-isr', 'true')
 Astro.response.headers.set('cache-control', 'max-age=60')
 ---
@@ -39,7 +39,9 @@ Astro.response.headers.set('cache-control', 'max-age=60')
 		<p class="instructions">
 			Current date: {new Date().toLocaleString()}
 			<br/>
-			Math.random(): {Math.random()}
+			Random value: {Math.random()}
+			<br/>
+			Param: {Astro.params.dynamic}
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
