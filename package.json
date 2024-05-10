@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "up": "wrangler pages deploy ./dist --project-name astro-ssg --branch production"
+    "up": "wrangler pages deploy ./dist --project-name astro-isr --branch main"
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",

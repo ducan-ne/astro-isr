@@ -1,5 +1,9 @@
 import type { APIContext, MiddlewareNext } from 'astro'
 
+export function generateCacheKey() {
+  // TODO
+}
+
 // TODO fix type any
 export async function onRequest(context: APIContext<{ title: string }>, next: MiddlewareNext) {
   const cache = context.locals.runtime.caches.default
@@ -8,7 +12,7 @@ export async function onRequest(context: APIContext<{ title: string }>, next: Mi
     return new Response(inCache.body as any, inCache as any)
   }
   const res = await next()
-  const shouldCache = res.headers.get('x-ssg') === 'true'
+  const shouldCache = res.headers.get('x-isr') === 'true'
   if (shouldCache) {
     await cache.put(context.request as any, res.clone() as any)
   }
