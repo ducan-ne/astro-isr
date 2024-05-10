@@ -8,3 +8,4 @@ Revalidate: https://astro-isr-fz2.pages.dev/revalidate?key=https://astro-isr-fz2
 - Revalidate all pages when deploy (use BUILD_ID as the cache namespace)
 - Cache key for revalidate
 - Skip SSG pages
+- Generate pages caches after deploy (not useful imo but doable) 
